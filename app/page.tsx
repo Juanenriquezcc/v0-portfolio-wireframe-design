@@ -12,10 +12,10 @@ export default function Page() {
     <div className="min-h-screen bg-white font-mono text-black">
       {/* Wireframe Label */}
       <div className="border-b-2 border-black bg-gray-100 px-6 py-2 flex items-center justify-between">
-        <span className="text-xs font-bold tracking-widest uppercase">Lo-Fi Wireframe — Portfolio: Samuel Esteban Mena Pupiales</span>
+        <span className="text-xs font-bold tracking-widest uppercase">Wireframe Lo-Fi — Portafolio: Samuel Esteban Mena Pupiales</span>
         <div className="flex gap-4 text-xs text-gray-500">
           <span className="border border-gray-400 px-2 py-0.5">Desktop + Mobile</span>
-          <span className="border border-gray-400 px-2 py-0.5">Grayscale Only</span>
+          <span className="border border-gray-400 px-2 py-0.5">Solo Escala de Grises</span>
         </div>
       </div>
 
@@ -25,7 +25,7 @@ export default function Page() {
       {/* ── DESKTOP VIEW ── */}
       <section className="border-b-4 border-black">
         <div className="bg-gray-200 border-b-2 border-black px-6 py-1">
-          <span className="text-xs tracking-widest uppercase font-bold">[ Desktop — ≥ 1024px ]</span>
+          <span className="text-xs tracking-widest uppercase font-bold">[ Escritorio — ≥ 1024px ]</span>
         </div>
         <div className="max-w-[1100px] mx-auto px-8 pb-16">
           <WireframeNav />
@@ -41,7 +41,7 @@ export default function Page() {
       {/* ── MOBILE VIEW ── */}
       <section>
         <div className="bg-gray-200 border-b-2 border-black px-6 py-1">
-          <span className="text-xs tracking-widest uppercase font-bold">[ Mobile — ≤ 390px ]</span>
+          <span className="text-xs tracking-widest uppercase font-bold">[ Móvil — ≤ 390px ]</span>
         </div>
         <div className="max-w-[390px] mx-auto px-4 pb-16 border-x-2 border-dashed border-gray-400">
           <WireframeNav mobile />
