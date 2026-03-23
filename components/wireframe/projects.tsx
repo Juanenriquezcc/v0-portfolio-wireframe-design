@@ -2,90 +2,116 @@ interface Props { mobile?: boolean }
 
 const projects = [
   {
+    id: "01",
     title: "Simulación de Intercepción de Misiles",
-    type: "Simulación",
-    description: "Aplicación que simula la trayectoria e intercepción de misiles utilizando modelos matemáticos y físicos para representar movimiento en el espacio.",
-    problem: "Permite visualizar y analizar escenarios de intercepción sin necesidad de entornos reales, facilitando la comprensión de conceptos de física y cálculo aplicados al movimiento.",
-    approach: "Implementé modelos matemáticos para trayectorias, desarrollé la lógica de simulación y creé representaciones gráficas de resultados para validar el comportamiento del sistema.",
-    technologies: ["Python", "Modelado Matemático", "Simulación Numérica", "Matplotlib"],
-    keyDecision: "Uso de simulación discreta para modelar movimiento en el tiempo. Representación visual para facilitar interpretación de resultados.",
+    category: "SIMULACIÓN",
+    year: "2024",
+    description: "Aplicación que simula trayectorias e intercepción de misiles usando modelos matemáticos y físicos.",
+    highlights: ["Modelado Matemático", "Simulación Numérica", "Visualización"],
+    technologies: ["Python", "Matplotlib"],
   },
   {
-    title: "Análisis Exploratorio de Datos de Arroz",
-    type: "Data Analysis",
-    description: "Proyecto de análisis de datos enfocado en explorar, limpiar y visualizar un dataset relacionado con producción o características del arroz.",
-    problem: "Permite identificar patrones, tendencias y posibles anomalías en los datos, facilitando la toma de decisiones basada en información.",
-    approach: "Realicé limpieza y preprocesamiento de datos, análisis exploratorio (EDA), generación de visualizaciones e interpretación de resultados.",
-    technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
-    keyDecision: "Uso de EDA para entender estructura y calidad de los datos antes de modelar. Visualización como herramienta principal para detectar patrones.",
+    id: "02",
+    title: "Análisis de Datos de Arroz",
+    category: "DATA ANALYSIS",
+    year: "2024",
+    description: "Proyecto de análisis exploratorio para identificar patrones y tendencias en datos de producción de arroz.",
+    highlights: ["EDA", "Limpieza de Datos", "Insights"],
+    technologies: ["Python", "Pandas", "NumPy", "Seaborn"],
   },
   {
+    id: "03",
     title: "Colegio Mentes Creativas",
-    type: "Full-Stack",
-    description: "Sistema web para la gestión de información académica, incluyendo estudiantes, cursos y procesos administrativos básicos.",
-    problem: "Optimiza la organización de datos educativos y reduce la dependencia de procesos manuales en entornos escolares.",
-    approach: "Desarrollé funcionalidades principales del sistema, implementé operaciones CRUD, diseñé interfaces de usuario y organicé la estructura del proyecto.",
-    technologies: ["JavaScript", "HTML", "CSS", "CRUD Estructurado"],
-    keyDecision: "Implementación de lógica CRUD para gestión eficiente de datos. Diseño simple enfocado en facilidad de uso para usuarios no técnicos.",
+    category: "FULL-STACK",
+    year: "2024",
+    description: "Sistema web para gestión académica incluyendo estudiantes, cursos y procesos administrativos.",
+    highlights: ["CRUD", "UI/UX", "Gestión de Datos"],
+    technologies: ["JavaScript", "HTML", "CSS"],
   },
 ]
 
 export default function WireframeProjects({ mobile }: Props) {
   return (
     <section className={`border-b-2 border-black py-12 ${mobile ? "py-8" : ""}`}>
-      {/* Section header */}
-      <div className="flex items-center gap-4 mb-8">
-        <span className="text-xs tracking-widest uppercase font-bold">03 — Proyectos</span>
-        <div className="flex-1 border-t border-black" />
-        <span className="text-xs text-gray-500">3 casos de estudio</span>
+      {/* Section header - left aligned with counter */}
+      <div className="flex items-end justify-between mb-8">
+        <div>
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Sección</p>
+          <div className="flex items-baseline gap-3">
+            <span className={`font-bold ${mobile ? "text-2xl" : "text-4xl"}`}>02</span>
+            <span className="text-xs tracking-widest uppercase font-bold border-b-2 border-black pb-1">Proyectos</span>
+          </div>
+        </div>
+        <div className="border border-black px-3 py-1 text-xs tracking-widest">
+          {projects.length} TRABAJOS
+        </div>
       </div>
 
-      <div className="flex flex-col gap-6">
-        {projects.map((project, i) => (
-          <div key={project.title} className="border-2 border-black">
-            {/* Project header bar */}
-            <div className="border-b-2 border-black px-4 py-2 flex items-center justify-between bg-gray-100">
-              <div className="flex items-center gap-3">
-                <span className="text-xs text-gray-500 font-bold">{String(i + 1).padStart(2, "0")}</span>
-                <span className={`font-bold tracking-tight ${mobile ? "text-base" : "text-lg"}`}>{project.title}</span>
+      {/* Projects as timeline/list style - different from cards */}
+      <div className="space-y-0">
+        {projects.map((project, index) => (
+          <div key={project.id} className="border-2 border-black border-b-0 last:border-b-2">
+            {/* Project row header */}
+            <div className={`flex ${mobile ? "flex-col" : "flex-row items-stretch"}`}>
+              {/* Number column */}
+              <div className={`bg-black text-white flex items-center justify-center ${mobile ? "py-3" : "w-20"}`}>
+                <span className={`font-bold ${mobile ? "text-xl" : "text-2xl"}`}>{project.id}</span>
               </div>
-              <span className="border border-black text-xs px-2 py-0.5 font-bold tracking-widest">{project.type.toUpperCase()}</span>
-            </div>
-
-            <div className={`grid gap-0 ${mobile ? "grid-cols-1" : "grid-cols-[2fr_1fr_1fr]"}`}>
-              {/* Description + Problem */}
-              <div className={`p-4 ${!mobile ? "border-r-2 border-black" : "border-b-2 border-black"}`}>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-500">Descripción</p>
-                <p className="text-sm text-gray-800 leading-relaxed mb-3">{project.description}</p>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-500">Problema Resuelto</p>
-                <p className="text-sm text-gray-700 leading-relaxed">{project.problem}</p>
-              </div>
-
-              {/* Technical approach */}
-              <div className={`p-4 ${!mobile ? "border-r-2 border-black" : "border-b-2 border-black"}`}>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-500">Enfoque Técnico</p>
-                <p className="text-sm text-gray-700 leading-relaxed mb-3">{project.approach}</p>
-                <p className="text-xs font-bold uppercase tracking-widest mb-1 text-gray-500">Decisión Clave</p>
-                <p className="text-sm text-gray-700 leading-relaxed">{project.keyDecision}</p>
-              </div>
-
-              {/* Technologies */}
-              <div className="p-4">
-                <p className="text-xs font-bold uppercase tracking-widest mb-2 text-gray-500">Tecnologías</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="border border-black text-xs px-2 py-0.5">{tech}</span>
-                  ))}
+              
+              {/* Main content */}
+              <div className={`flex-1 ${!mobile ? "border-l-2 border-black" : "border-t-2 border-black"}`}>
+                {/* Title bar */}
+                <div className={`border-b-2 border-black p-4 flex ${mobile ? "flex-col gap-2" : "items-center justify-between"}`}>
+                  <div>
+                    <p className={`font-bold ${mobile ? "text-base" : "text-lg"}`}>{project.title}</p>
+                    <p className="text-xs text-gray-500">{project.description}</p>
+                  </div>
+                  <div className="flex gap-2 shrink-0">
+                    <span className="border border-black text-xs px-2 py-0.5 bg-gray-100">{project.category}</span>
+                    <span className="border border-gray-400 text-xs px-2 py-0.5 text-gray-500">{project.year}</span>
+                  </div>
                 </div>
-                <div className="mt-4 border-t border-gray-300 pt-3">
-                  <div className="border-2 border-dashed border-gray-400 text-center py-2 text-xs text-gray-400 tracking-widest">
-                    [ VER ESTUDIO DE CASO ]
+                
+                {/* Details row */}
+                <div className={`grid ${mobile ? "grid-cols-1" : "grid-cols-[1fr_1fr_auto]"}`}>
+                  {/* Highlights */}
+                  <div className={`p-4 ${!mobile ? "border-r-2 border-black" : "border-b-2 border-black"}`}>
+                    <p className="text-xs text-gray-400 uppercase tracking-widest mb-2">Aspectos Clave</p>
+                    <div className="flex flex-wrap gap-1">
+                      {project.highlights.map((h) => (
+                        <span key={h} className="text-xs border border-gray-300 px-2 py-0.5">{h}</span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Technologies */}
+                  <div className={`p-4 ${!mobile ? "border-r-2 border-black" : "border-b-2 border-black"}`}>
+                    <p className="text-xs text-gray-400 uppercase tracking-widest mb-2">Stack</p>
+                    <div className="flex flex-wrap gap-1">
+                      {project.technologies.map((tech) => (
+                        <span key={tech} className="text-xs border-2 border-black px-2 py-0.5 font-bold">{tech}</span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Action */}
+                  <div className="p-4 flex items-center justify-center">
+                    <div className="border-2 border-dashed border-gray-400 px-4 py-2 text-xs tracking-widest text-gray-400">
+                      [ VER ]
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Bottom CTA */}
+      <div className="mt-6 flex justify-center">
+        <div className="border-2 border-black px-8 py-3 text-xs font-bold tracking-widest uppercase">
+          [ Ver Todos los Proyectos en GitHub ]
+        </div>
       </div>
     </section>
   )

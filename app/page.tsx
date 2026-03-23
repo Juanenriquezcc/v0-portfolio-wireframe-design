@@ -31,8 +31,8 @@ export default function Page() {
           <WireframeNav />
           <WireframeHero />
           <WireframeAbout />
-          <WireframeProjects />
           <WireframeSkills />
+          <WireframeProjects />
           <WireframeProcess />
           <WireframeContact />
         </div>
@@ -47,8 +47,8 @@ export default function Page() {
           <WireframeNav mobile />
           <WireframeHero mobile />
           <WireframeAbout mobile />
-          <WireframeProjects mobile />
           <WireframeSkills mobile />
+          <WireframeProjects mobile />
           <WireframeProcess mobile />
           <WireframeContact mobile />
         </div>
