@@ -4,7 +4,7 @@ export default function WireframeNav({ mobile }: Props) {
   return (
     <nav className={`border-b-2 border-black flex items-center justify-between py-4 mt-0 ${mobile ? "py-3" : ""}`}>
       <div className="border border-black px-3 py-1 text-xs font-bold tracking-widest">
-        SEMPU
+        JJEC
       </div>
       {mobile ? (
         <div className="border border-black px-3 py-1 text-xs">☰ MENÚ</div>

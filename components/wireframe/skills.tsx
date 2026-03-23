@@ -3,19 +3,19 @@ interface Props { mobile?: boolean }
 const skillGroups = [
   {
     category: "Frontend",
-    items: ["React", "JavaScript", "TypeScript", "TailwindCSS", "HTML5 / CSS3", "Arquitectura SPA", "Vite"],
+    items: ["JavaScript", "HTML5", "CSS3", "Diseño de Interfaces", "Responsive Design", "Componentes UI"],
   },
   {
-    category: "Backend",
-    items: ["Node.js", "Express", "Spring Boot", "APIs REST", "JWT Auth", "PostgreSQL", "MongoDB", "MySQL"],
+    category: "Data & Python",
+    items: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Análisis Exploratorio (EDA)"],
   },
   {
     category: "Herramientas",
-    items: ["Git / GitHub", "Docker", "AWS S3", "Figma", "Postman", "VS Code", "IntelliJ IDEA"],
+    items: ["Git / GitHub", "VS Code", "Jupyter Notebook", "Figma", "Postman"],
   },
   {
     category: "Conceptos",
-    items: ["Arquitectura C4", "RBAC", "Arquitectura en Capas", "Diseño de Componentes", "Diagramas ER", "UML / Flujos", "Código Limpio"],
+    items: ["Modelado Matemático", "Simulación Numérica", "Operaciones CRUD", "Visualización de Datos", "Diseño Centrado en Usuario"],
   },
 ]
 

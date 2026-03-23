@@ -15,15 +15,15 @@ export default function WireframeHero({ mobile }: Props) {
           {/* Name */}
           <div className={`border-2 border-black px-4 py-4 bg-gray-100 ${mobile ? "" : ""}`}>
             <p className={`font-bold tracking-tight leading-none ${mobile ? "text-2xl" : "text-5xl"}`}>
-              Samuel Esteban<br />Mena Pupiales
+              Juan José<br />Enriquez Córdoba
             </p>
           </div>
 
           {/* Statement */}
           <div className="border border-dashed border-gray-500 px-4 py-3">
             <p className="text-sm text-gray-700 leading-relaxed">
-              "Diseño sistemas antes que interfaces — construyendo soluciones eficientes y estructuradas
-              a través del análisis de requisitos, planificación de arquitectura y código intencional."
+              "Transformo ideas en experiencias digitales — combinando análisis de datos, simulaciones matemáticas 
+              y desarrollo web para crear soluciones que resuelven problemas reales."
             </p>
           </div>
 
@@ -51,7 +51,7 @@ export default function WireframeHero({ mobile }: Props) {
                   <span>Enfoque</span><span className="font-bold text-black">Desarrollo Frontend</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Ubicación</span><span className="font-bold text-black">Ecuador</span>
+                  <span>Ubicación</span><span className="font-bold text-black">Pasto, Nariño, Colombia</span>
                 </div>
               </div>
             </div>

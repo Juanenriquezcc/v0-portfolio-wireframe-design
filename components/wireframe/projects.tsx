@@ -2,49 +2,31 @@ interface Props { mobile?: boolean }
 
 const projects = [
   {
-    title: "AlmasEnAccion",
-    type: "Frontend",
-    description: "Plataforma web para descubrimiento e interacción con iniciativas sociales, enfocada en visibilidad y participación comunitaria.",
-    problem: "Las iniciativas sociales pequeñas tienen baja exposición y carecen de herramientas digitales estructuradas para conectar con usuarios.",
-    approach: "Arquitectura SPA basada en componentes con enfoque en la modularidad y escalabilidad. Consumo de API REST desacoplada.",
-    technologies: ["JavaScript", "HTML5 + CSS3", "Arquitectura Componentes", "Integración REST"],
-    keyDecision: "Separación clara entre capa de presentación y lógica de datos (desacoplamiento frontend-backend). Renderizado dinámico para contenido cambiante.",
+    title: "Simulación de Intercepción de Misiles",
+    type: "Simulación",
+    description: "Aplicación que simula la trayectoria e intercepción de misiles utilizando modelos matemáticos y físicos para representar movimiento en el espacio.",
+    problem: "Permite visualizar y analizar escenarios de intercepción sin necesidad de entornos reales, facilitando la comprensión de conceptos de física y cálculo aplicados al movimiento.",
+    approach: "Implementé modelos matemáticos para trayectorias, desarrollé la lógica de simulación y creé representaciones gráficas de resultados para validar el comportamiento del sistema.",
+    technologies: ["Python", "Modelado Matemático", "Simulación Numérica", "Matplotlib"],
+    keyDecision: "Uso de simulación discreta para modelar movimiento en el tiempo. Representación visual para facilitar interpretación de resultados.",
   },
   {
-    title: "AlmasEnAccionBackend",
-    type: "Backend",
-    description: "API REST que soporta la lógica de negocio de la plataforma, gestionando usuarios, iniciativas y persistencia de datos.",
-    problem: "Centraliza la lógica y permite escalar la aplicación manteniendo consistencia en los datos y seguridad en las operaciones.",
-    approach: "Arquitectura REST para facilitar integración. Separación en capas (rutas, controladores, modelos) para mejorar mantenibilidad.",
-    technologies: ["Node.js", "Express", "Base de Datos", "Arquitectura REST"],
-    keyDecision: "Diseño REST para facilitar integración con múltiples clientes. Separación en capas para mejorar mantenibilidad y escalabilidad.",
+    title: "Análisis Exploratorio de Datos de Arroz",
+    type: "Data Analysis",
+    description: "Proyecto de análisis de datos enfocado en explorar, limpiar y visualizar un dataset relacionado con producción o características del arroz.",
+    problem: "Permite identificar patrones, tendencias y posibles anomalías en los datos, facilitando la toma de decisiones basada en información.",
+    approach: "Realicé limpieza y preprocesamiento de datos, análisis exploratorio (EDA), generación de visualizaciones e interpretación de resultados.",
+    technologies: ["Python", "Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    keyDecision: "Uso de EDA para entender estructura y calidad de los datos antes de modelar. Visualización como herramienta principal para detectar patrones.",
   },
   {
     title: "Colegio Mentes Creativas",
     type: "Full-Stack",
-    description: "Sistema web para gestión académica que permite administrar información de estudiantes, cursos y procesos educativos.",
-    problem: "Reduce la dependencia de procesos manuales y mejora la organización de datos académicos en entornos educativos.",
-    approach: "Implementé funcionalidades CRUD completas para gestión de datos académicos. Diseñé interfaces enfocadas en usabilidad para usuarios no técnicos.",
-    technologies: ["JavaScript", "HTML + CSS", "CRUD Estructurado", "Base de Datos"],
-    keyDecision: "Normalización de datos para evitar redundancias. Interfaces simples para reducir la curva de aprendizaje del usuario final.",
-  },
-  {
-    title: "PlayTubeMusic",
-    type: "Frontend",
-    description: "Aplicación web para reproducción de contenido multimedia, integrando fuentes externas para consumo de música.",
-    problem: "Centraliza el acceso a contenido multimedia en una experiencia más controlada y personalizable que las plataformas tradicionales.",
-    approach: "Implementé lógica de reproducción multimedia en el navegador. Integré APIs externas para obtención dinámica de contenido.",
-    technologies: ["JavaScript", "APIs Externas", "HTML5 + CSS3", "Manejo de Eventos"],
-    keyDecision: "Uso de APIs externas para evitar almacenamiento redundante de contenido. Manejo eficiente del estado para evitar inconsistencias.",
-  },
-  {
-    title: "PlayTubeMusicBackend",
-    type: "Backend",
-    description: "Backend que gestiona usuarios, preferencias y datos persistentes para la aplicación multimedia.",
-    problem: "Permite personalización (playlists, historial, usuarios) que no es posible solo con APIs externas.",
-    approach: "Diseñé endpoints para gestión de usuarios y datos personalizados. Implementé lógica para persistencia de playlists e historial.",
-    technologies: ["Node.js", "Express", "Base de Datos", "API REST"],
-    keyDecision: "Separación entre datos externos (API) y datos internos (usuarios). Diseño de endpoints enfocados en bajo acoplamiento.",
+    description: "Sistema web para la gestión de información académica, incluyendo estudiantes, cursos y procesos administrativos básicos.",
+    problem: "Optimiza la organización de datos educativos y reduce la dependencia de procesos manuales en entornos escolares.",
+    approach: "Desarrollé funcionalidades principales del sistema, implementé operaciones CRUD, diseñé interfaces de usuario y organicé la estructura del proyecto.",
+    technologies: ["JavaScript", "HTML", "CSS", "CRUD Estructurado"],
+    keyDecision: "Implementación de lógica CRUD para gestión eficiente de datos. Diseño simple enfocado en facilidad de uso para usuarios no técnicos.",
   },
 ]
 
@@ -55,7 +37,7 @@ export default function WireframeProjects({ mobile }: Props) {
       <div className="flex items-center gap-4 mb-8">
         <span className="text-xs tracking-widest uppercase font-bold">03 — Proyectos</span>
         <div className="flex-1 border-t border-black" />
-        <span className="text-xs text-gray-500">5 casos de estudio</span>
+        <span className="text-xs text-gray-500">3 casos de estudio</span>
       </div>
 
       <div className="flex flex-col gap-6">

@@ -18,25 +18,25 @@ export default function WireframeContact({ mobile }: Props) {
             <div className="flex flex-col gap-3 text-sm">
               <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
                 <span className="text-xs text-gray-500 uppercase tracking-widest">Email</span>
-                <span className="font-bold text-xs">samuel.mena@example.com</span>
+                <span className="font-bold text-xs">juan.enriquez@example.com</span>
               </div>
               <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
                 <span className="text-xs text-gray-500 uppercase tracking-widest">GitHub</span>
-                <span className="font-bold text-xs">github.com/SamuelMenan</span>
+                <span className="font-bold text-xs">github.com/JuanEnriquez</span>
               </div>
               <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
                 <span className="text-xs text-gray-500 uppercase tracking-widest">LinkedIn</span>
-                <span className="font-bold text-xs">linkedin.com/in/SamuelMena</span>
+                <span className="font-bold text-xs">linkedin.com/in/JuanEnriquez</span>
               </div>
               <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
                 <span className="text-xs text-gray-500 uppercase tracking-widest">Ubicación</span>
-                <span className="font-bold text-xs">Ecuador</span>
+                <span className="font-bold text-xs">Pasto, Nariño, Colombia</span>
               </div>
             </div>
           </div>
           {/* Download CTA */}
           <div className="border-2 border-dashed border-gray-400 px-4 py-3 flex items-center justify-between">
-            <span className="text-xs text-gray-600">Samuel Esteban Mena Pupiales — CV</span>
+            <span className="text-xs text-gray-600">Juan José Enriquez Córdoba — CV</span>
             <div className="border-2 border-black px-4 py-1.5 text-xs font-bold tracking-widest uppercase">
               [ DESCARGAR PDF ]
             </div>
@@ -68,7 +68,7 @@ export default function WireframeContact({ mobile }: Props) {
 
       {/* Footer strip */}
       <div className="mt-12 border-t-2 border-black pt-4 flex items-center justify-between text-xs text-gray-500">
-        <span>Samuel Esteban Mena Pupiales — Portafolio</span>
+        <span>Juan José Enriquez Córdoba — Portafolio</span>
         <span>© 2026</span>
       </div>
     </section>
