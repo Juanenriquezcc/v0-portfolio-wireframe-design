@@ -12,7 +12,7 @@ export default function Page() {
     <div className="min-h-screen bg-white font-mono text-black">
       {/* Wireframe Label */}
       <div className="border-b-2 border-black bg-gray-100 px-6 py-2 flex items-center justify-between">
-        <span className="text-xs font-bold tracking-widest uppercase">Wireframe Lo-Fi — Portafolio: Samuel Esteban Mena Pupiales</span>
+        <span className="text-xs font-bold tracking-widest uppercase">Wireframe Lo-Fi — Portafolio: Juan José Enriquez Córdoba</span>
         <div className="flex gap-4 text-xs text-gray-500">
           <span className="border border-gray-400 px-2 py-0.5">Desktop + Mobile</span>
           <span className="border border-gray-400 px-2 py-0.5">Solo Escala de Grises</span>
@@ -31,8 +31,8 @@ export default function Page() {
           <WireframeNav />
           <WireframeHero />
           <WireframeAbout />
-          <WireframeProjects />
           <WireframeSkills />
+          <WireframeProjects />
           <WireframeProcess />
           <WireframeContact />
         </div>
@@ -47,8 +47,8 @@ export default function Page() {
           <WireframeNav mobile />
           <WireframeHero mobile />
           <WireframeAbout mobile />
-          <WireframeProjects mobile />
           <WireframeSkills mobile />
+          <WireframeProjects mobile />
           <WireframeProcess mobile />
           <WireframeContact mobile />
         </div>

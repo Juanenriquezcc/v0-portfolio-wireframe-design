@@ -3,73 +3,136 @@ interface Props { mobile?: boolean }
 export default function WireframeContact({ mobile }: Props) {
   return (
     <section className={`py-12 ${mobile ? "py-8" : ""}`}>
-      {/* Section header */}
-      <div className="flex items-center gap-4 mb-8">
-        <span className="text-xs tracking-widest uppercase font-bold">06 — Contacto</span>
-        <div className="flex-1 border-t border-black" />
+      {/* Section header - big and bold */}
+      <div className="border-2 border-black mb-8">
+        <div className={`bg-black text-white p-6 ${mobile ? "p-4" : ""}`}>
+          <p className="text-xs text-gray-400 uppercase tracking-widest mb-2">Sección 05</p>
+          <p className={`font-bold ${mobile ? "text-2xl" : "text-4xl"}`}>Hablemos</p>
+        </div>
+        <div className="p-4 bg-gray-50">
+          <p className="text-sm text-gray-600">
+            Estoy abierto a oportunidades de trabajo, colaboraciones en proyectos 
+            o simplemente para conectar y compartir ideas.
+          </p>
+        </div>
       </div>
 
-      <div className={`grid gap-8 ${mobile ? "grid-cols-1" : "grid-cols-[1fr_1fr]"}`}>
-
-        {/* Left: Contact info */}
-        <div className="flex flex-col gap-4">
-          <div className="border-2 border-black p-4">
-            <p className="text-xs font-bold uppercase tracking-widest mb-4 border-b border-black pb-2">Información de Contacto</p>
-            <div className="flex flex-col gap-3 text-sm">
-              <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
-                <span className="text-xs text-gray-500 uppercase tracking-widest">Email</span>
-                <span className="font-bold text-xs">samuel.mena@example.com</span>
-              </div>
-              <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
-                <span className="text-xs text-gray-500 uppercase tracking-widest">GitHub</span>
-                <span className="font-bold text-xs">github.com/SamuelMenan</span>
-              </div>
-              <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
-                <span className="text-xs text-gray-500 uppercase tracking-widest">LinkedIn</span>
-                <span className="font-bold text-xs">linkedin.com/in/SamuelMena</span>
-              </div>
-              <div className="border border-gray-300 px-3 py-2 flex justify-between items-center">
-                <span className="text-xs text-gray-500 uppercase tracking-widest">Ubicación</span>
-                <span className="font-bold text-xs">Ecuador</span>
-              </div>
+      {/* Contact layout - stacked differently */}
+      <div className={`${mobile ? "space-y-4" : "flex gap-0"}`}>
+        
+        {/* Left - Contact cards */}
+        <div className={`${mobile ? "" : "flex-1"}`}>
+          <div className="border-2 border-black">
+            <div className="border-b-2 border-black px-4 py-2 bg-gray-100">
+              <span className="text-xs font-bold tracking-widest uppercase">Canales de Contacto</span>
             </div>
-          </div>
-          {/* Download CTA */}
-          <div className="border-2 border-dashed border-gray-400 px-4 py-3 flex items-center justify-between">
-            <span className="text-xs text-gray-600">Samuel Esteban Mena Pupiales — CV</span>
-            <div className="border-2 border-black px-4 py-1.5 text-xs font-bold tracking-widest uppercase">
-              [ DESCARGAR PDF ]
+            
+            {/* Contact items as rows */}
+            <div className="divide-y-2 divide-black">
+              <div className="p-4 flex items-center gap-4">
+                <div className="w-10 h-10 border-2 border-black flex items-center justify-center shrink-0">
+                  <span className="text-xs font-bold">@</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-gray-400 uppercase tracking-widest">Email</p>
+                  <p className="text-sm font-bold truncate">juan.enriquez@email.com</p>
+                </div>
+                <div className="border border-black px-2 py-1 text-xs tracking-widest shrink-0">COPIAR</div>
+              </div>
+              
+              <div className="p-4 flex items-center gap-4">
+                <div className="w-10 h-10 border-2 border-black flex items-center justify-center shrink-0">
+                  <span className="text-xs font-bold">in</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-gray-400 uppercase tracking-widest">LinkedIn</p>
+                  <p className="text-sm font-bold truncate">linkedin.com/in/juanenriquez</p>
+                </div>
+                <div className="border border-black px-2 py-1 text-xs tracking-widest shrink-0">IR</div>
+              </div>
+              
+              <div className="p-4 flex items-center gap-4">
+                <div className="w-10 h-10 border-2 border-black flex items-center justify-center shrink-0">
+                  <span className="text-xs font-bold">GH</span>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs text-gray-400 uppercase tracking-widest">GitHub</p>
+                  <p className="text-sm font-bold truncate">github.com/JuanEnriquez</p>
+                </div>
+                <div className="border border-black px-2 py-1 text-xs tracking-widest shrink-0">IR</div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Right: Simple form */}
-        <div className="border-2 border-black p-4">
-          <p className="text-xs font-bold uppercase tracking-widest mb-4 border-b border-black pb-2">Enviar un Mensaje</p>
-          <div className="flex flex-col gap-3">
-            <div>
-              <p className="text-xs text-gray-500 mb-1 uppercase tracking-widest">Nombre</p>
-              <div className="border border-black h-8 bg-gray-50" />
+        {/* Right - Form */}
+        <div className={`${mobile ? "" : "flex-1 border-l-0"}`}>
+          <div className={`border-2 border-black ${!mobile ? "border-l-0" : ""}`}>
+            <div className="border-b-2 border-black px-4 py-2 bg-gray-100">
+              <span className="text-xs font-bold tracking-widest uppercase">Mensaje Directo</span>
             </div>
-            <div>
-              <p className="text-xs text-gray-500 mb-1 uppercase tracking-widest">Email</p>
-              <div className="border border-black h-8 bg-gray-50" />
-            </div>
-            <div>
-              <p className="text-xs text-gray-500 mb-1 uppercase tracking-widest">Mensaje</p>
-              <div className="border border-black h-20 bg-gray-50" />
-            </div>
-            <div className="border-2 border-black bg-black text-white text-center py-2 text-xs font-bold tracking-widest uppercase">
-              [ ENVIAR MENSAJE ]
+            
+            <div className="p-4 space-y-3">
+              {/* Form row */}
+              <div className={`grid ${mobile ? "grid-cols-1" : "grid-cols-2"} gap-3`}>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Nombre</p>
+                  <div className="border-2 border-black h-10 bg-white" />
+                </div>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Email</p>
+                  <div className="border-2 border-black h-10 bg-white" />
+                </div>
+              </div>
+              
+              <div>
+                <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Asunto</p>
+                <div className="border-2 border-black h-10 bg-white" />
+              </div>
+              
+              <div>
+                <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">Mensaje</p>
+                <div className="border-2 border-black h-24 bg-white" />
+              </div>
+              
+              <div className="border-2 border-black bg-black text-white text-center py-3 text-xs font-bold tracking-widest uppercase">
+                [ Enviar Mensaje ]
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Footer strip */}
-      <div className="mt-12 border-t-2 border-black pt-4 flex items-center justify-between text-xs text-gray-500">
-        <span>Samuel Esteban Mena Pupiales — Portafolio</span>
-        <span>© 2026</span>
+      {/* Location bar */}
+      <div className="mt-6 border-2 border-black flex items-stretch">
+        <div className="border-r-2 border-black p-4 bg-gray-100 shrink-0">
+          <span className="text-xs font-bold tracking-widest uppercase">Ubicación</span>
+        </div>
+        <div className="flex-1 p-4 flex items-center justify-between">
+          <span className="text-sm">Pasto, Nariño, Colombia</span>
+          <span className="text-xs text-gray-400">GMT-5</span>
+        </div>
+        <div className={`border-l-2 border-black flex items-center justify-center bg-gray-50 ${mobile ? "px-4" : "px-8"}`}>
+          <div className="border-2 border-dashed border-gray-300 w-16 h-8 flex items-center justify-center">
+            <span className="text-xs text-gray-300">[ MAP ]</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-12 pt-6 border-t-2 border-black">
+        <div className={`flex ${mobile ? "flex-col gap-4" : "items-center justify-between"}`}>
+          <div>
+            <p className="font-bold">Juan José Enriquez Córdoba</p>
+            <p className="text-xs text-gray-500">Estudiante de Ingeniería de Software</p>
+          </div>
+          <div className="flex gap-4">
+            <div className="border border-black w-8 h-8 flex items-center justify-center text-xs">in</div>
+            <div className="border border-black w-8 h-8 flex items-center justify-center text-xs">GH</div>
+            <div className="border border-black w-8 h-8 flex items-center justify-center text-xs">@</div>
+          </div>
+          <p className="text-xs text-gray-400">© 2026 — Portafolio</p>
+        </div>
       </div>
     </section>
   )
